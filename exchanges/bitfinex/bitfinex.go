@@ -9,11 +9,11 @@ import (
 	"strings"
 	"time"
 
+	"github.com/CryptonautExchange/thefeed/common"
+	"github.com/CryptonautExchange/thefeed/config"
+	"github.com/CryptonautExchange/thefeed/exchanges"
+	"github.com/CryptonautExchange/thefeed/exchanges/ticker"
 	"github.com/gorilla/websocket"
-	"github.com/thrasher-/gocryptotrader/common"
-	"github.com/thrasher-/gocryptotrader/config"
-	"github.com/thrasher-/gocryptotrader/exchanges"
-	"github.com/thrasher-/gocryptotrader/exchanges/ticker"
 )
 
 const (

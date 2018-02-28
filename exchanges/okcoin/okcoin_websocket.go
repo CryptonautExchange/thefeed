@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/CryptonautExchange/thefeed/common"
 	"github.com/gorilla/websocket"
-	"github.com/thrasher-/gocryptotrader/common"
 )
 
 const (

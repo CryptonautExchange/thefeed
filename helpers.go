@@ -4,13 +4,13 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/thrasher-/gocryptotrader/currency"
-	"github.com/thrasher-/gocryptotrader/currency/pair"
-	"github.com/thrasher-/gocryptotrader/currency/translation"
-	exchange "github.com/thrasher-/gocryptotrader/exchanges"
-	"github.com/thrasher-/gocryptotrader/exchanges/orderbook"
-	"github.com/thrasher-/gocryptotrader/exchanges/stats"
-	"github.com/thrasher-/gocryptotrader/exchanges/ticker"
+	"github.com/CryptonautExchange/thefeed/currency"
+	"github.com/CryptonautExchange/thefeed/currency/pair"
+	"github.com/CryptonautExchange/thefeed/currency/translation"
+	exchange "github.com/CryptonautExchange/thefeed/exchanges"
+	"github.com/CryptonautExchange/thefeed/exchanges/orderbook"
+	"github.com/CryptonautExchange/thefeed/exchanges/stats"
+	"github.com/CryptonautExchange/thefeed/exchanges/ticker"
 )
 
 // MapCurrenciesByExchange returns a list of currency pairs mapped to an

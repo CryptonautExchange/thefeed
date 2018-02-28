@@ -3,7 +3,7 @@ package stats
 import (
 	"testing"
 
-	"github.com/thrasher-/gocryptotrader/currency/pair"
+	"github.com/CryptonautExchange/thefeed/currency/pair"
 )
 
 func TestLenByPrice(t *testing.T) {

@@ -3,8 +3,6 @@ package btcc
 import (
 	"testing"
 	"time"
-
-	"github.com/thrasher-/gocryptotrader/config"
 )
 
 // Please supply your own APIkeys here to do better tests

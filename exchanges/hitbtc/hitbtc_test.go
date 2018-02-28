@@ -2,8 +2,6 @@ package hitbtc
 
 import (
 	"testing"
-
-	"github.com/thrasher-/gocryptotrader/config"
 )
 
 var p HitBTC

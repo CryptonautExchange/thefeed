@@ -8,10 +8,9 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/thrasher-/gocryptotrader/common"
-	"github.com/thrasher-/gocryptotrader/config"
-	"github.com/thrasher-/gocryptotrader/exchanges"
-	"github.com/thrasher-/gocryptotrader/exchanges/ticker"
+	"github.com/CryptonautExchange/thefeed/common"
+	"github.com/CryptonautExchange/thefeed/exchanges"
+	"github.com/CryptonautExchange/thefeed/exchanges/ticker"
 )
 
 const (

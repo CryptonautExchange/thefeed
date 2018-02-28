@@ -3,10 +3,10 @@ package alphapoint
 import (
 	"errors"
 
-	"github.com/thrasher-/gocryptotrader/currency/pair"
-	"github.com/thrasher-/gocryptotrader/exchanges"
-	"github.com/thrasher-/gocryptotrader/exchanges/orderbook"
-	"github.com/thrasher-/gocryptotrader/exchanges/ticker"
+	"github.com/CryptonautExchange/thefeed/currency/pair"
+	"github.com/CryptonautExchange/thefeed/exchanges"
+	"github.com/CryptonautExchange/thefeed/exchanges/orderbook"
+	"github.com/CryptonautExchange/thefeed/exchanges/ticker"
 )
 
 // GetExchangeAccountInfo retrieves balances for all enabled currencies on the

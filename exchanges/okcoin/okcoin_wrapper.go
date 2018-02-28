@@ -4,11 +4,11 @@ import (
 	"errors"
 	"log"
 
-	"github.com/thrasher-/gocryptotrader/common"
-	"github.com/thrasher-/gocryptotrader/currency/pair"
-	"github.com/thrasher-/gocryptotrader/exchanges"
-	"github.com/thrasher-/gocryptotrader/exchanges/orderbook"
-	"github.com/thrasher-/gocryptotrader/exchanges/ticker"
+	"github.com/CryptonautExchange/thefeed/common"
+	"github.com/CryptonautExchange/thefeed/currency/pair"
+	"github.com/CryptonautExchange/thefeed/exchanges"
+	"github.com/CryptonautExchange/thefeed/exchanges/orderbook"
+	"github.com/CryptonautExchange/thefeed/exchanges/ticker"
 )
 
 // Start starts the OKCoin go routine

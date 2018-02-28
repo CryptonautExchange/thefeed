@@ -5,11 +5,10 @@ import (
 	"log"
 	"net/http"
 
+	exchange "github.com/CryptonautExchange/thefeed/exchanges"
+	"github.com/CryptonautExchange/thefeed/exchanges/orderbook"
+	"github.com/CryptonautExchange/thefeed/exchanges/ticker"
 	"github.com/gorilla/mux"
-	"github.com/thrasher-/gocryptotrader/config"
-	exchange "github.com/thrasher-/gocryptotrader/exchanges"
-	"github.com/thrasher-/gocryptotrader/exchanges/orderbook"
-	"github.com/thrasher-/gocryptotrader/exchanges/ticker"
 )
 
 // AllEnabledExchangeOrderbooks holds the enabled exchange orderbooks

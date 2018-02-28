@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/CryptonautExchange/thefeed/exchanges"
 	"github.com/gorilla/mux"
-	"github.com/thrasher-/gocryptotrader/exchanges"
 )
 
 // RESTLogger logs the requests internally

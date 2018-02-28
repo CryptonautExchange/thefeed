@@ -4,8 +4,6 @@ import (
 	"net/url"
 	"testing"
 	"time"
-
-	"github.com/thrasher-/gocryptotrader/config"
 )
 
 // Please add your private keys and customerID for better tests
