@@ -4,9 +4,14 @@ import (
 	"fmt"
 
 	"github.com/CryptonautExchange/thefeed/exchanges/poloniex"
+
+	"github.com/asdine/storm"
 )
 
 func main() {
+	// Initialize Orderbook Database
+	db, err := storm.Open("orderbook.db")
+	defer db.Close()
 
 	ws, err := poloniex.NewWSClient(true)
 	if err != nil {
