@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/iowar/poloniex"
+	"github.com/CryptonautExchange/thefeed/exchanges/poloniex"
 )
 
 func main() {
@@ -13,7 +13,9 @@ func main() {
 		return
 	}
 
-	err = ws.SubscribeMarket("usdt_btc")
+	market := "btc_eth"
+
+	err = ws.SubscribeMarket(market)
 	if err != nil {
 		return
 	}
@@ -21,7 +23,7 @@ func main() {
 	var m poloniex.OrderBook
 
 	for {
-		receive := <-ws.Subs["usdt_btc"]
+		receive := <-ws.Subs[market]
 		updates := receive.([]poloniex.MarketUpdate)
 		for _, v := range updates {
 			if v.TypeUpdate == "OrderBookRemove" || v.TypeUpdate == "OrderBookModify" {
