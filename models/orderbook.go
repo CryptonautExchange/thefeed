@@ -1,17 +1,20 @@
 package models
 
 import (
-//"fmt"
+	"time"
+
+	"labix.org/v2/mgo/bson"
 )
 
 type Orderbook struct {
-	Market    string
-	Currency  string
-	Commodity string
-	Bids      []bid // Buy Orders
-	Asks      []ask // Sell Orders
+	ID             bson.ObjectId `storm:"id"`
+	Bids           []bid         // Buy Orders
+	Asks           []ask         // Sell Orders
+	LastActivityAt time.Time
 	// Orderbook Stats
 	HighestBid bid
 	LowestAsk  ask
 	Spread     string
+	BidDepth   string
+	AskDepth   string
 }
