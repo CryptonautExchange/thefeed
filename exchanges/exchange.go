@@ -5,12 +5,9 @@ import (
 )
 
 type Exchange interface {
-	Initialize(string, string)
+	Initialize([]string)
 	Start()
 	Stop()
-
-	Orderbook()
-
-	IsEnabled() bool
-	SetEnabled(bool)
+	Status() string
+	PopulateOrderbook() int
 }
