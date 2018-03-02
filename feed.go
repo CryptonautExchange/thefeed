@@ -6,10 +6,13 @@ import (
 	exchange "github.com/CryptonautExchange/thefeed/exchanges"
 
 	"github.com/asdine/storm"
+	. "github.com/hackwave/color"
 )
 
 func main() {
 	// Initialize Orderbook Database
+	fmt.Println(Magenta("The Feed"), Gray(":"), Blue("Market Data Mocking Library"))
+	fmt.Println(Gray("====================================="))
 	db, err := storm.Open("orderbook.db")
 	defer db.Close()
 
