@@ -31,7 +31,6 @@ var (
 type Poloniex struct {
 	key        string
 	secret     string
-	logger     Logger
 	LogBus     chan<- string
 	httpClient *http.Client
 }
@@ -46,7 +45,6 @@ func NewClient(key, secret string, args ...bool) (client *Poloniex, err error) {
 	if len(args) > 0 && args[0] {
 		logbus := make(chan string)
 		client.LogBus = logbus
-		client.logger = Logger{isOpen: true, Lock: &sync.Mutex{}}
 
 		go client.logger.LogRoutine(logbus)
 	}
