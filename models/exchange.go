@@ -5,5 +5,6 @@ import (
 )
 
 type Exchange struct {
-	ID bson.ObjectId `storm:"id"`
+	ID      bson.ObjectId `storm:"id"`
+	Markets []Market
 }
