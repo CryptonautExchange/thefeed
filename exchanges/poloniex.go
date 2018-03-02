@@ -8,7 +8,7 @@ import (
 )
 
 type Poloniex struct {
-	Incoming         chan interface{} // Seems like it should be the message we are expecting like JSON types
+	Incoming         interface{}      // Seems like it should be the message we are expecting like JSON types
 	MarketUpdates    chan interface{} //[]poloniex.MarketUpdate
 	Websocket        *poloniex.WSClient
 	Orderbook        poloniex.OrderBook
@@ -47,6 +47,7 @@ func (self Poloniex) Stop() {
 
 func (self Poloniex) Status() string {
 	fmt.Println("Status Of Websockets Connection Is...")
+	return ""
 }
 
 func (self Poloniex) PopulateOrderbook() {
