@@ -3,14 +3,13 @@ package exchange
 import (
 	"fmt"
 
-	"github.com/CryptonautExchange/thefeed/models"
-
 	"github.com/hackwave/color"
 )
 
 type FakeExchange struct {
 	//Incoming         chan interface{} // Seems like it should be the message we are expecting like JSON types
 	//MarketUpdates
+
 	SubscribedMarket string
 	Enabled          bool
 }
@@ -18,17 +17,17 @@ type FakeExchange struct {
 func (self FakeExchange) Initialize(subscribedMarket string) (err error) {
 	// TODO:
 	// TODO: Move to a propper logging system
-	fmt.Println(Gray("Initializing Poloniex..."))
+	fmt.Println(Gray("Initializing"), Blue(Bold("Fake Exchange...")))
 	return nil
 }
 
 func (self FakeExchange) Start() {
-	fmt.Println("Starting Websockets Connection To Poloniex...")
+	fmt.Println("Starting Websockets Connection To ", Blue(Bold("Fake Exchange")), "...")
 
 }
 
 func (self FakeExchange) Stop() {
-	fmt.Println("Stopping Websockets Connection To Poloniex...")
+	fmt.Println("Stopping Websockets Connection To", Blue(Bold("Fake Exchange")), "...")
 }
 
 func (self FakeExchange) Status() string {
@@ -36,6 +35,6 @@ func (self FakeExchange) Status() string {
 }
 
 func (self FakeExchange) PopulateOrderbook() {
-	fmt.Println("Populating Poloniex Orderbook...")
+	fmt.Println("Populating", Blue(Bold("Fake Exchange")), "Orderbook...")
 	// Return asks and bids to fill an orderbook in the model calling this
 }
