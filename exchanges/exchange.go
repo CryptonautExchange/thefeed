@@ -1,11 +1,7 @@
 package exchange
 
-import (
-//"fmt"
-)
-
 type Exchange interface {
-	Initialize([]string)
+	Initialize(string)
 	Start()
 	Stop()
 	Status() string
