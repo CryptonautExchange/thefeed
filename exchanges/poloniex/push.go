@@ -69,7 +69,6 @@ type NewTrade struct {
 type WSClient struct {
 	Subs       map[string]chan interface{}
 	LogBus     chan<- string
-	logger     Logger
 	wssStopChs map[string]chan bool
 	wssLock    *sync.Mutex
 	wssClient  *websocket.Conn
@@ -113,7 +112,6 @@ func NewWSClient(args ...bool) (wsclient *WSClient, err error) {
 	if len(args) > 0 && args[0] {
 		logbus := make(chan string)
 		wsclient.LogBus = logbus
-		wsclient.logger = Logger{isOpen: true, Lock: &sync.Mutex{}}
 
 		go wsclient.logger.LogRoutine(logbus)
 	}
