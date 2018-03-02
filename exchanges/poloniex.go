@@ -9,7 +9,7 @@ import (
 
 type Poloniex struct {
 	Incoming         chan interface{} // Seems like it should be the message we are expecting like JSON types
-	MarketUpdates    []poloniex.MarketUpdate
+	MarketUpdates    chan interface{} //[]poloniex.MarketUpdate
 	Websocket        *poloniex.WSClient
 	Orderbook        poloniex.OrderBook
 	SubscribedMarket string
@@ -35,7 +35,7 @@ func (self Poloniex) Initialize(subscribedMarket string) (err error) {
 func (self Poloniex) Start() {
 	fmt.Println("Starting Websockets Connection To Poloniex...")
 	for {
-		self.Incoming = <-ws.Subs[market]
+		self.Incoming = <-self.Websocket.Subs[self.SubscribedMarket]
 		self.MarketUpdates = self.Incoming.([]poloniex.MarketUpdate)
 	}
 

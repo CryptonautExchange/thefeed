@@ -32,6 +32,7 @@ func (self FakeExchange) Stop() {
 
 func (self FakeExchange) Status() string {
 	fmt.Println("Status Of Websockets Connection Is...")
+	return ""
 }
 
 func (self FakeExchange) PopulateOrderbook() {
