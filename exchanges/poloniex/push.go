@@ -108,14 +108,6 @@ func NewWSClient(args ...bool) (wsclient *WSClient, err error) {
 		wssStopChs: make(map[string]chan bool),
 		wssLock:    &sync.Mutex{},
 	}
-
-	if len(args) > 0 && args[0] {
-		logbus := make(chan string)
-		wsclient.LogBus = logbus
-
-		go wsclient.logger.LogRoutine(logbus)
-	}
-
 	if err = setchannelids(); err != nil {
 		return
 	}
@@ -149,10 +141,6 @@ func (ws *WSClient) subscribe(chid, chname string) (err error) {
 		return err
 	}
 
-	if ws.logger.isOpen {
-		ws.LogBus <- fmt.Sprintf("[*] Subscribed channel '%s'.\n", chname)
-	}
-
 	go func(chid string) {
 		var imsg []interface{}
 		var wsupdate interface{}
@@ -163,9 +151,6 @@ func (ws *WSClient) subscribe(chid, chname string) (err error) {
 			case <-ws.wssStopChs[chname]:
 				close(ws.wssStopChs[chname])
 				delete(ws.wssStopChs, chname)
-				if ws.logger.isOpen {
-					ws.LogBus <- fmt.Sprintf("[*] Unsubscribed channel '%s'.\n", chname)
-				}
 				return
 			default:
 			}

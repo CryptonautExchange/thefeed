@@ -40,14 +40,6 @@ func NewClient(key, secret string, args ...bool) (client *Poloniex, err error) {
 		secret:     secret,
 		httpClient: &http.Client{Timeout: time.Second * 10},
 	}
-
-	if len(args) > 0 && args[0] {
-		logbus := make(chan string)
-		client.LogBus = logbus
-
-		go client.logger.LogRoutine(logbus)
-	}
-
 	return
 }
 
