@@ -3,9 +3,9 @@ package exchange
 import (
 	"fmt"
 
+	"github.com/CryptonautExchange/thefeed/exchanges/poloniex"
 	"github.com/CryptonautExchange/thefeed/models"
-
-	"github.com/hackwave/color"
+	. "github.com/hackwave/color"
 )
 
 type Poloniex struct {
