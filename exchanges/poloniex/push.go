@@ -2,7 +2,6 @@ package poloniex
 
 import (
 	"encoding/json"
-	"fmt"
 	"strconv"
 	"strings"
 	"sync"
@@ -108,12 +107,9 @@ func NewWSClient(args ...bool) (wsclient *WSClient, err error) {
 		wssStopChs: make(map[string]chan bool),
 		wssLock:    &sync.Mutex{},
 	}
+
 	if err = setchannelids(); err != nil {
 		return
-	}
-
-	if wsclient.logger.isOpen {
-		wsclient.LogBus <- "[*] Created New WSClient."
 	}
 
 	return
