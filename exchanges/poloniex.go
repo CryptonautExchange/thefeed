@@ -8,7 +8,7 @@ import (
 )
 
 type Poloniex struct {
-	MarketUpdates    chan interface{} //[]poloniex.MarketUpdate
+	MarketUpdates    []poloniex.MarketUpdate
 	Websocket        *poloniex.WSClient
 	Orderbook        poloniex.OrderBook
 	SubscribedMarket string
