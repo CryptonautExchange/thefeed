@@ -4,13 +4,12 @@ import (
 	"fmt"
 
 	"github.com/CryptonautExchange/thefeed/exchanges/poloniex"
-	"github.com/CryptonautExchange/thefeed/models"
 	. "github.com/hackwave/color"
 )
 
 type Poloniex struct {
 	Incoming         chan interface{} // Seems like it should be the message we are expecting like JSON types
-	MarketUpdates    []poloniex.MarketUpdates
+	MarketUpdates    []poloniex.MarketUpdate
 	Websocket        *poloniex.WSClient
 	Orderbook        poloniex.OrderBook
 	SubscribedMarket string
