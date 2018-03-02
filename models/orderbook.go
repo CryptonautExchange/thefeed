@@ -8,12 +8,12 @@ import (
 
 type Orderbook struct {
 	ID             bson.ObjectId `storm:"id"`
-	Bids           []bid         // Buy Orders
-	Asks           []ask         // Sell Orders
+	Bids           []Bid         // Buy Orders
+	Asks           []Ask         // Sell Orders
 	LastActivityAt time.Time
 	// Orderbook Stats
-	HighestBid bid
-	LowestAsk  ask
+	HighestBid string
+	LowestAsk  string
 	Spread     string
 	BidDepth   string
 	AskDepth   string
