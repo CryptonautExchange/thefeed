@@ -4,7 +4,8 @@ import (
 	"fmt"
 
 	"github.com/CryptonautExchange/thefeed/exchanges/poloniex"
-	. "github.com/hackwave/color"
+
+	. "github.com/hackwave/textui/color"
 )
 
 type Poloniex struct {

@@ -6,9 +6,8 @@ import (
 	exchange "github.com/CryptonautExchange/thefeed/exchanges"
 
 	"github.com/asdine/storm"
-	. "github.com/hackwave/color"
-
-	"libs/ui/spinner"
+	. "github.com/hackwave/textui/color"
+	"github.com/hackwave/textui/loader"
 )
 
 func main() {
