@@ -3,7 +3,7 @@ package exchange
 import (
 	"fmt"
 
-	. "github.com/hackwave/color"
+	. "github.com/hackwave/textui/color"
 )
 
 type FakeExchange struct {
